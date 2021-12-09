@@ -1,0 +1,148 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test1@naver.com",
+      "name": "테스트유저1",
+      "nickname": "헬로",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "email": "test2@naver.com",
+      "name": "테스트유저2",
+      "nickname": "월드",
+      "password": "5678"
+    },
+    {
+      "email": "test3@naver.com",
+      "name": "너의",
+      "nickname": "이름은",
+      "password": "23232",
+      "id": 9
+    },
+    {
+      "email": "test4@naver.com",
+      "name": "박지민",
+      "nickname": "망개떡",
+      "password": "342321312",
+      "id": 10
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "image_url": "https://picsum.photos/id/1/1080/1080",
+      "comment": "게시글1",
+      "tag": "하늘",
+      "isLike": true
+    },
+    {
+      "id": 2,
+      "image_url": "https://picsum.photos/id/2/1080/1080",
+      "comment": "게시글2",
+      "tag": "사람",
+      "isLike": false
+    },
+    {
+      "id": 3,
+      "image_url": "https://picsum.photos/id/3/1080/1080",
+      "comment": "게시글3",
+      "tag": "하늘",
+      "isLike": false
+    },
+    {
+      "id": 4,
+      "image_url": "https://picsum.photos/id/4/1080/1080",
+      "comment": "게시글4",
+      "tag": "바다",
+      "isLike": false
+    },
+    {
+      "id": 5,
+      "image_url": "https://picsum.photos/id/5/1080/1080",
+      "comment": "게시글5",
+      "tag": "바다",
+      "isLike": false
+    },
+    {
+      "id": 6,
+      "image_url": "https://picsum.photos/id/6/1080/1080",
+      "comment": "게시글6",
+      "tag": "하늘",
+      "isLike": false
+    },
+    {
+      "id": 7,
+      "image_url": "https://picsum.photos/id/7/1080/1080",
+      "comment": "게시글7",
+      "tag": "바다",
+      "isLike": false
+    },
+    {
+      "id": 8,
+      "image_url": "https://picsum.photos/id/8/1080/1080",
+      "comment": "게시글8",
+      "tag": "하늘",
+      "isLike": false
+    },
+    {
+      "id": 9,
+      "image_url": "https://picsum.photos/id/9/1080/1080",
+      "comment": "게시글9",
+      "tag": "하늘",
+      "isLike": false
+    },
+    {
+      "id": 10,
+      "image_url": "https://picsum.photos/id/10/1080/1080",
+      "comment": "게시글10",
+      "tag": "구름",
+      "isLike": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "name": "test1@naver.com",
+      "content": "댓글1",
+      "postId": 10
+    },
+    {
+      "id": 2,
+      "name": "test1@naver.com",
+      "content": "댓글2",
+      "postId": 10
+    },
+    {
+      "name": "테스트유저1",
+      "content": "댓글3",
+      "postId": "10",
+      "id": 3
+    },
+    {
+      "name": "테스트유저1",
+      "content": "댓글4",
+      "postId": "9",
+      "id": 4
+    },
+    {
+      "name": "테스트유저1",
+      "content": "댓글5",
+      "postId": "10",
+      "id": 5
+    },
+    {
+      "name": "테스트유저1",
+      "content": "댓글6",
+      "postId": "9",
+      "id": 6
+    },
+    {
+      "name": "테스트유저1",
+      "content": "댓글7",
+      "postId": "10",
+      "id": 7
+    }
+  ]
+}
