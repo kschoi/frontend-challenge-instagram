@@ -32,70 +32,70 @@
   "posts": [
     {
       "id": 1,
-      "image_url": "https://picsum.photos/id/1/1080/1080",
+      "image_url": "https://picsum.photos/id/11/1080/1080",
       "comment": "게시글1",
       "tag": "하늘",
       "isLike": true
     },
     {
       "id": 2,
-      "image_url": "https://picsum.photos/id/2/1080/1080",
+      "image_url": "https://picsum.photos/id/12/1080/1080",
       "comment": "게시글2",
       "tag": "사람",
       "isLike": false
     },
     {
       "id": 3,
-      "image_url": "https://picsum.photos/id/3/1080/1080",
+      "image_url": "https://picsum.photos/id/13/1080/1080",
       "comment": "게시글3",
       "tag": "하늘",
       "isLike": false
     },
     {
       "id": 4,
-      "image_url": "https://picsum.photos/id/4/1080/1080",
+      "image_url": "https://picsum.photos/id/14/1080/1080",
       "comment": "게시글4",
       "tag": "바다",
       "isLike": false
     },
     {
       "id": 5,
-      "image_url": "https://picsum.photos/id/5/1080/1080",
+      "image_url": "https://picsum.photos/id/15/1080/1080",
       "comment": "게시글5",
       "tag": "바다",
       "isLike": false
     },
     {
       "id": 6,
-      "image_url": "https://picsum.photos/id/6/1080/1080",
+      "image_url": "https://picsum.photos/id/16/1080/1080",
       "comment": "게시글6",
       "tag": "하늘",
       "isLike": false
     },
     {
       "id": 7,
-      "image_url": "https://picsum.photos/id/7/1080/1080",
+      "image_url": "https://picsum.photos/id/17/1080/1080",
       "comment": "게시글7",
       "tag": "바다",
       "isLike": false
     },
     {
       "id": 8,
-      "image_url": "https://picsum.photos/id/8/1080/1080",
+      "image_url": "https://picsum.photos/id/18/1080/1080",
       "comment": "게시글8",
       "tag": "하늘",
       "isLike": false
     },
     {
       "id": 9,
-      "image_url": "https://picsum.photos/id/9/1080/1080",
+      "image_url": "https://picsum.photos/id/19/1080/1080",
       "comment": "게시글9",
       "tag": "하늘",
       "isLike": false
     },
     {
       "id": 10,
-      "image_url": "https://picsum.photos/id/10/1080/1080",
+      "image_url": "https://picsum.photos/id/110/1080/1080",
       "comment": "게시글10",
       "tag": "구름",
       "isLike": false

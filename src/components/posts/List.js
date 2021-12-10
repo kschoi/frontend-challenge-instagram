@@ -1,28 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid } from "@chakra-ui/react";
 import ListItem from "./ListItem";
+import { useSelector, useDispatch } from "react-redux";
+import { postsAction } from "../../store/posts";
 
-const mock = [
-  {
-    id: 1,
-    title: "우리 예쁜 고양이",
-    thumbnailUrl: "http://placekitten.com/200/300",
-  },
-  {
-    id: 2,
-    title: "귀염둥이",
-    thumbnailUrl: "http://placekitten.com/300/300",
-  },
-];
+const List = () => {
+  // useSelector로 store의 state를 가져옵니다.
+  const { data, error, loading } = useSelector((state) => state.posts.posts);
+  const dispatch = useDispatch();
 
-const List = ({ data = mock }) => {
+  useEffect(() => {
+    dispatch(postsAction.getPosts());
+  }, [dispatch]);
+
+  if (loading) return <div>로딩 중...</div>;
+  if (error) return <div>에러 발생...</div>;
+  if (!data) return null;
+
   return (
     <Grid gridTemplateColumns="repeat(3, 1fr)">
       {data.map((item) => (
         <ListItem
           key={item.id}
-          title={item.title}
-          imageUrl={item.thumbnailUrl}
+          title={item.comment}
+          imageUrl={item.image_url}
         />
       ))}
     </Grid>
