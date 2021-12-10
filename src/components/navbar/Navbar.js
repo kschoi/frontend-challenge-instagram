@@ -7,6 +7,7 @@ const Navbar = () => {
     <Box
       as="nav"
       pos="sticky"
+      zIndex="sticky"
       top="0"
       left="0"
       w="100%"
