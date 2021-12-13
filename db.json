@@ -27,6 +27,13 @@
       "nickname": "망개떡",
       "password": "342321312",
       "id": 10
+    },
+    {
+      "email": "yoplle@hanmail.net",
+      "name": "안녕",
+      "nickname": "나는",
+      "password": "1111",
+      "id": 11
     }
   ],
   "posts": [

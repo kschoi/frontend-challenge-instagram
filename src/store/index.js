@@ -3,15 +3,17 @@ import createSagaMiddleware from "redux-saga";
 import { all, call } from "redux-saga/effects";
 import { logger } from "redux-logger";
 import { POSTS, postsReducer, postsSaga } from "./posts";
+import { USERS, usersReducer, usersSaga } from "./users";
 
 const sagaMiddleware = createSagaMiddleware();
 
 function* rootSaga() {
-  yield all([call(postsSaga)]);
+  yield all([call(usersSaga), call(postsSaga)]);
 }
 
 const rootReducer = combineReducers({
   [POSTS]: postsReducer,
+  [USERS]: usersReducer,
 });
 
 export default function createStore() {
