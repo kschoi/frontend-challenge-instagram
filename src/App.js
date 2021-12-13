@@ -1,14 +1,14 @@
 import React from "react";
 import { Container } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
-import List from "./components/posts/List";
+import Router from "./routes";
 
 function App() {
   return (
     <>
       <Navbar />
       <Container maxW="container.lg">
-        <List />
+        <Router />
       </Container>
     </>
   );
