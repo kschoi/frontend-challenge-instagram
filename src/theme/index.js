@@ -3,8 +3,7 @@ import { extendTheme } from "@chakra-ui/react";
 const variantOutlined = () => ({
   field: {
     _focus: {
-      borderColor: "var(--chakra-ui-focus-ring-color)",
-      boxShadow: "0 0 0 2px var(--chakra-ui-focus-ring-color)",
+      boxShadow: "none",
     },
   },
 });
@@ -12,8 +11,7 @@ const variantOutlined = () => ({
 const variantFilled = () => ({
   field: {
     _focus: {
-      borderColor: "var(--chakra-ui-focus-ring-color)",
-      boxShadow: "0 0 0 1px var(--chakra-ui-focus-ring-color)",
+      boxShadow: "none",
     },
   },
 });
@@ -21,8 +19,7 @@ const variantFilled = () => ({
 const variantFlushed = () => ({
   field: {
     _focus: {
-      borderColor: "var(--chakra-ui-focus-ring-color)",
-      boxShadow: "0 1px 0 0 var(--chakra-ui-focus-ring-color)",
+      boxShadow: "none",
     },
   },
 });

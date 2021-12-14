@@ -1,34 +1,35 @@
 import React from "react";
-import { Box, Button, Heading, Input, Grid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Input,
+  Grid,
+  Text,
+} from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { usersAction } from "../../store/users";
-import { Navigate } from "react-router-dom";
 
-const Signup = () => {
+const Login = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
-  const { data, error, loading } = useSelector((state) => state.users.userData);
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    dispatch(usersAction.addUsers(data));
+    dispatch(usersAction.getUsers(data));
   };
-
-  if (data) {
-    return <Navigate to="/login" />;
-  }
 
   return (
     <Box maxW="400px" mt={{ base: "20px", md: "100px" }} mx="auto">
       <Box bg="white" borderWidth="1px" p={5}>
         <form action="" onSubmit={handleSubmit(onSubmit)}>
           <Grid gap={5}>
-            <Heading fontSize="3xl">Signup</Heading>
+            <Heading fontSize="3xl">Login</Heading>
             <Input
               variant="flushed"
               type="email"
@@ -44,33 +45,35 @@ const Signup = () => {
             )}
             <Input
               variant="flushed"
-              type="text"
-              placeholder="name"
-              errorBorderColor="crimson"
-              {...register("name")}
-            />
-            <Input
-              variant="flushed"
-              type="text"
-              placeholder="nickname"
-              errorBorderColor="crimson"
-              {...register("nickname")}
-            />
-            <Input
-              variant="flushed"
               type="password"
               placeholder="password"
               errorBorderColor="crimson"
               {...register("password")}
             />
             <Button type="submit" colorScheme="red">
-              join
+              Login
             </Button>
           </Grid>
         </form>
       </Box>
+      <Flex mt="10px" justifyContent="center">
+        <Text as="span" fontSize="sm" color="gray.500">
+          계정이 없으신가요?
+        </Text>
+        <a href="/signup">
+          <Text
+            as="span"
+            ml={2}
+            fontSize="sm"
+            color="gray.500"
+            textDecoration="underline"
+          >
+            회원가입
+          </Text>
+        </a>
+      </Flex>
     </Box>
   );
 };
 
-export default Signup;
+export default Login;

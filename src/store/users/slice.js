@@ -12,6 +12,18 @@ const slice = createSlice({
   name,
   initialState,
   reducers: {
+    setIsLogin(state, { payload }) {
+      state.isLogin = payload;
+    },
+    getUsers(state) {
+      state.users = reducerUtils.loading();
+    },
+    getUsersSuccess(state, { payload }) {
+      state.users = reducerUtils.success(payload.data);
+    },
+    getUsersError(state, { payload }) {
+      state.users = reducerUtils.error(payload);
+    },
     addUsers(state) {
       state.userData = reducerUtils.loading();
     },
