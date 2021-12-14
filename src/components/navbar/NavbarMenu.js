@@ -2,17 +2,20 @@ import React from "react";
 import { Button, Flex, IconButton, Avatar } from "@chakra-ui/react";
 import { SearchIcon, EditIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const NavbarMenu = () => {
   const isLogin = useSelector((state) => state.users.isLogin);
+  const navigate = useNavigate();
 
   if (!isLogin) {
     return (
       <Flex alignItems="center">
         <Button
+          onClick={() => navigate("/login")}
           size="sm"
           colorScheme="red"
-          onClick={() => (window.location.href = "/login")}
+          textDecoration="none !important"
         >
           로그인
         </Button>
@@ -28,6 +31,7 @@ const NavbarMenu = () => {
         variant="unstyled"
       />
       <IconButton
+        onClick={() => navigate("/write")}
         aria-label="게시글 작성하기"
         icon={<EditIcon boxSize={6} />}
         variant="unstyled"
