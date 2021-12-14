@@ -1,10 +1,27 @@
 import React from "react";
-import { Flex, IconButton, Avatar } from "@chakra-ui/react";
+import { Button, Flex, IconButton, Avatar } from "@chakra-ui/react";
 import { SearchIcon, EditIcon } from "@chakra-ui/icons";
+import { useSelector } from "react-redux";
 
 const NavbarMenu = () => {
+  const isLogin = useSelector((state) => state.users.isLogin);
+
+  if (!isLogin) {
+    return (
+      <Flex alignItems="center">
+        <Button
+          size="sm"
+          colorScheme="red"
+          onClick={() => (window.location.href = "/login")}
+        >
+          로그인
+        </Button>
+      </Flex>
+    );
+  }
+
   return (
-    <Flex data-login="true" alignItems="center">
+    <Flex alignItems="center">
       <IconButton
         aria-label="검색하기"
         icon={<SearchIcon boxSize={6} />}
